@@ -1,0 +1,14 @@
+ pls notice how to compile：
+dts files：dts-dirs += 18321;
+config file：sdm660-perf_defconfig;
+VENDOR_EDIT define 1//#ifdef VENDOR_EDIT   //need for true,VENDOR_EDIT is 1
+MSM_18321 define 1  //set 1 to defined(MSM_18321)//need for true,MSM_18321 is 1
+OPPO_18321 define 1 //if (is_project(OPPO_18321)) for true
+IS_PROJECT_18321  define 1
+
+TIPS:
+VENDOR_EDIT is our RM vendor macro to distinguish RM code from  qualcomm original code.
+18321 is  our internal project name for RM2pro;
+MSM_18321 is our compile project;
+OPPO_18321 is our RM code running to choice RM2pro product,because our code had so many other product on SDM660 baseline.
+you can try  porting.
